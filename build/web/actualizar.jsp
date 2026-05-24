@@ -28,7 +28,7 @@
                 </div>
                 
                 <button type="submit" class="btn btn-warning w-100">Actualizar Datos</button>
-                <a href="index.html" class="btn btn-outline-secondary w-100 mt-2">Volver al Inicio</a>
+                <a href="dashboard.html" class="btn btn-outline-secondary w-100 mt-2">Volver al Inicio</a>
             </form>
         </div>
     </div>

@@ -15,7 +15,7 @@
                 <p class="fs-5"><strong>Nombre recibido:</strong> <%= request.getAttribute("nombreUsuario") %></p>
                 <p class="fs-5"><strong>Correo recibido:</strong> <%= request.getAttribute("correoUsuario") %></p>
             </div>
-            <a href="index.html" class="btn btn-outline-primary mt-3">Volver al inicio</a>
+            <a href="dashboard.html" class="btn btn-outline-primary mt-3">Volver al inicio</a>
         </div>
     </div>
 </body>

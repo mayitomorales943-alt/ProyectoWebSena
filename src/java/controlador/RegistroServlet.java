@@ -19,22 +19,24 @@ public class RegistroServlet extends HttpServlet {
         
         String nombre = request.getParameter("nombre");
         String correo = request.getParameter("correo");
+        String password = request.getParameter("password"); 
         
         try {
             Connection con = Conexion.conectar();
 
-            String sql = "INSERT INTO usuarios (nombre, correo) VALUES (?, ?)";
+            String sql = "INSERT INTO usuarios (nombre, correo, password) VALUES (?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps.setString(1, nombre);
             ps.setString(2, correo);
+            ps.setString(3, password);
 
             ps.executeUpdate();
 
             ps.close();
             con.close();
             
-            System.out.println("¡Usuario guardado en la base de datos con éxito!");
+            System.out.println("¡Usuario guardado en la base de datos con éxito, incluyendo su contraseña!");
         } catch (Exception e) {
             System.err.println("Error al insertar en la base de datos: " + e.getMessage());
         }
